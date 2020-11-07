@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html lang= 'ru'>
+<html lang='ru'>
+
 <head>
 	<title> WAHL MOSER </title>
-	<meta http-equiv= 'Content-type' content= 'text/html;charset=UTF-8' / >
-	<link rel= "icon" type= "image/png" sizes= '32x32' href="67001731a7365acb1d5f0642bea25292.jpg">
-	<link rel= "stylesheet" type= "text/css" href= "Style.css">
+	<meta http-equiv='Content-type' content='text/html;charset=UTF-8' />
+	<link rel="icon" type="image/png" sizes='32x32' href="67001731a7365acb1d5f0642bea25292.jpg">
+	<link rel="stylesheet" type="text/css" href="Style.css">
 	<script type="text/javascript" src="script.js"></script>
 </head>
+
 <body>
 	<header>
 		<div class="container">
-			<div class= "logo">
-				<a href= "images/2020-10-19_20-46-19.png"> </a>
-			</div> 
+			<div class="logo">
+				<a href="images/2020-10-19_20-46-19.png"> </a>
+			</div>
 
 			<div class="phone">
 				<span> 89179679000</span>
 			</div>
-			<div class="profile" >
-				<img id= "profileImg" src= "images/8b6f5f94a53dbc3c8240347693830120.jpg">
+			<div class="profile">
+				<img id="profileImg" src="images/8b6f5f94a53dbc3c8240347693830120.jpg">
 				<span>Lizaveta G.</span>
 			</div>
 			<div id="basket" class="cart" onclick="openPopup()">
@@ -31,80 +33,75 @@
 
 				<div class="popup-list" id="itemsList">
 				</div>
-				<span > <img id="close" src="images/x-mark-transparent-24.png"></span>
+				<span> <img id="close" src="images/x-mark-transparent-24.png"></span>
 			</div>
 		</div>
 
 		<div>
-			<div class="mode" >  
-				09:00 - 20:00 пн - пт, 10:00 - 18:00 сб - вс 
-				<img class=logo2 src= "images/2020-10-19_20-46-19.png"> 
-				<p><input  type="search" name="q" placeholder="Поиск по каталогу">  <input id="search" type="submit" value="Найти"></p>
+			<div class="mode">
+				09:00 - 20:00 пн - пт, 10:00 - 18:00 сб - вс
+				<img class=logo2 src="images/2020-10-19_20-46-19.png">
+				<p><input type="search" name="q" placeholder="Поиск по каталогу"> <input id="search" type="submit"
+						value="Найти"></p>
+			</div>
+		</div>
+	</header>
+	<nav>
+		<div class="main">
+			<div class="dropdown">
+				<button class="dropbtn">Каталог</button>
+				<div class="dropdown-content">
+					<a href="#">Машинки для стрижки волос</a>
+					<a href="#">Триммеры </a>
+					<a href="#">Электробритвы / Шейверы</a>
+					<a href="#">Парикмахерские принадлежности</a>
+					<a href="#">Фены</a>
+					<a href="#">Плойки и утюжки</a>
+					<a href="#">Косметика</a>
+					<a href="#">Ножницы</a>
+					<a href="#">Профессиональный груминг</a>
+					<a href="#">Аксессуары для машинок и триммеров</a>
+				</div>
+			</div>
+			<div class="action">Акции</div>
+			<div class="pay">Доставка и оплата</div>
+			<div class="contact">Контакты</div>
+		</div>
+	</nav>
+	<div class="advertising">
+		<p class="arrow arrow-left"> \< </p> <img id="advertising" src="images/2020-10-20_10-44-59.png">
+				<p class="arrow arrow-right"> ></p>
+	</div>
+
+	<div id="description"> Фирменный магазин Moser, Wahl и Ermila, официальный дистрибьютор Moser в России</div>
+
+	<aside id="recomendation"> РЕКОМЕНДУЕМ </aside>
+
+	<div class="box">
+		<div class='product'>
+			<div class="product">
+				<img src="images/1028127514.jpg" width="250px" height="250px">
+				<p>ПРОФЕССИОНАЛЬНАЯ МАШИНКА С АККУМУЛЯТОРНЫМ ПИТАНИЕМ MOSER GENIO PRO FADING EDITION 1874-0053
+					14 200.00 р.</p>
+
+				<button onclick=changeCart()>В корзину</button>
+				<div onclick=changeCart() class="loader_inner"></div>
 			</div>
 
-		</div>	
-		</header>
-		<nav>
-			<div class= "main">
-				<div class= "dropdown">
-					<button class="dropbtn">Каталог</button>
-					<div class= "dropdown-content">
-						<a href="#">Машинки для стрижки волос</a>
-						<a href="#">Триммеры </a>
-						<a href="#">Электробритвы / Шейверы</a>
-						<a href="#">Парикмахерские принадлежности</a>
-						<a href="#">Фены</a>
-						<a href="#">Плойки и утюжки</a>
-						<a href="#">Косметика</a>
-						<a href="#">Ножницы</a>
-						<a href="#">Профессиональный груминг</a>
-						<a href="#">Аксессуары для машинок и триммеров</a>
-					</div>
-				</div>
-				<div class="action">Акции</div>
-				<div class="pay">Доставка и оплата</div>
-				<div class="contact">Контакты</div>
-			</div> 
-		</nav>
-
-
-		<div class="advertising">
-			<p class="arrow arrow-left"> \< </p> <img id="advertising" src="images/2020-10-20_10-44-59.png" > <p  class="arrow arrow-right"> ></p>  
-		</div>
-
-		<div id="description"> Фирменный магазин Moser, Wahl и Ermila, официальный дистрибьютор Moser в России</div>
-
-		<aside id="recomendation"> РЕКОМЕНДУЕМ </aside>			
-
-		<div class="box">
-			<div class='product'>
-				<div class="product">
-					<img src="images/1028127514.jpg" width="250px" height="250px">
-					<p>ПРОФЕССИОНАЛЬНАЯ МАШИНКА С АККУМУЛЯТОРНЫМ ПИТАНИЕМ MOSER GENIO PRO FADING EDITION 1874-0053
-					14 200.00 р.</p>
-				
-						<button onclick=changeCart() >В корзину</button>
-							 <div class="loader_inner"></div> 
-							
-					
-				</div>
-
-				<div class="product">
-					<img src="images/1001967791.jpg" width="250px" height="250px">
-					<p>ПРОФЕССИОНАЛЬНАЯ МАШИНКА С КОМБИНИРОВАННЫМ ПИТАНИЕМ MOSER LI+PRO2 1888-0050
+			<div class="product">
+				<img src="images/1001967791.jpg" width="250px" height="250px">
+				<p>ПРОФЕССИОНАЛЬНАЯ МАШИНКА С КОМБИНИРОВАННЫМ ПИТАНИЕМ MOSER LI+PRO2 1888-0050
 					14 900.00 р.</p>
-					<button onclick=changeCart()>В корзину</button>
-				</div>
+				<button onclick=changeCart()>В корзину</button>
+			</div>
 
-				<div class="product">
-					<img src="images/275.970.jpg" width="250px" height="250px">
-					<p>МАШИНКА С КОМБИНИРОВАННЫМ ПИТАНИЕМ MOSER CHROM2STYLE 1877-0050 / 1877-0051
+			<div class="product">
+				<img src="images/275.970.jpg" width="250px" height="250px">
+				<p>МАШИНКА С КОМБИНИРОВАННЫМ ПИТАНИЕМ MOSER CHROM2STYLE 1877-0050 / 1877-0051
 					14 800.00 р.</p>
-					<button onclick=changeCart()>В корзину</button>
-				</div>
-			</div>	
-
-			<footer></footer>
-		</body>
-
-		</html>
+				<button onclick=changeCart()>В корзину</button>
+			</div>
+		</div>
+		<footer></footer>
+</body>
+</html>
