@@ -48,7 +48,7 @@
 	height: 60px;
 	width: 60px;
 	background-size: auto;
-	visibility: hidden;
+	display: block;
 	
 }
 #close {
@@ -217,3 +217,4 @@
 	justify-content: center;
 	align-items: center;
 }
+
