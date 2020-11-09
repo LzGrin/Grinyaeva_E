@@ -42,23 +42,25 @@
 	/* margin: 0 auto; */
 	transform: translateX(-50%);
 }
-.loader_inner {
-	background: none repeat scroll 0 0 #ffffff;
-	/*background-image: url(images/loader.gif);*/
+#loader_inner {
+	display: flex;
+	background-image: url(images/b7C.gif);
 	height: 60px;
 	width: 60px;
-	background-size: auto;
-	display: block;
+	background-size: contain;
+	visibility: hidden;
+justify-content:center;
+align-items: flex-start;
+align-content: stretch;
 	
 }
 #close {
-	/*display: flex;*/
-	position: fixed;
+	display: flex;
+	/*position: fixed;*/
 	align-items: flex-end;
 	justify-content: flex-end;
 	width: 20px;
 	height: 20px;
-	visibility: hidden;
 }
 .logo {
 
