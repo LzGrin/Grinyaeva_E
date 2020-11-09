@@ -23,15 +23,15 @@
 				<img id="profileImg" src="images/8b6f5f94a53dbc3c8240347693830120.jpg">
 				<span>Lizaveta G.</span>
 			</div>
-			<div id="basket" class="cart" onclick="openPopup()">
+			<div id="basket" class="cart" onclick=openPopup()>
 				0
 				<span>Корзина</span>
 			</div>
 
-			<div class="popup" id="popup" onclick="openPopup()">
+			<div class="popup" id="popup" onclick=openPopup()>
 				Items in your cart:
 
-				<div class="popup-list" id="itemsList">
+				<div onclick=updatePopupData() class="popup-list" id="itemsList">
 				</div>
 				<span> <img id="close" src="images/x-mark-transparent-24.png"></span>
 			</div>
@@ -77,15 +77,15 @@
 
 	<aside id="recomendation"> РЕКОМЕНДУЕМ </aside>
 
-	<div class="box">
+	<div class="box" id="box">
 		<div class='product'>
 			<div class="product">
 				<img src="images/1028127514.jpg" width="250px" height="250px">
 				<p>ПРОФЕССИОНАЛЬНАЯ МАШИНКА С АККУМУЛЯТОРНЫМ ПИТАНИЕМ MOSER GENIO PRO FADING EDITION 1874-0053
 					14 200.00 р.</p>
 
-				<button onclick=changeCart()>В корзину</button>
-				<div onclick=changeCart() class="loader"><div class="loader_inner" src="images/loader.gif">  </div></div>
+				<button onclick=Test()>В корзину</button>
+				<div  id="loader"><div  id="loader_inner" src="images/loader.gif">  </div></div>
 			</div>
 
 			<div class="product">
@@ -102,6 +102,7 @@
 				<button onclick=changeCart()>В корзину</button>
 			</div>
 		</div>
+	</div>
 		<footer></footer>
 </body>
 </html>
