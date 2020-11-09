@@ -23,17 +23,17 @@
 				<img id="profileImg" src="images/8b6f5f94a53dbc3c8240347693830120.jpg">
 				<span>Lizaveta G.</span>
 			</div>
-			<div id="basket" class="cart" onclick=openPopup()>
+			<div id="basket" class="cart" onclick="openPopup()">
 				0
 				<span>Корзина</span>
 			</div>
 
-			<div class="popup" id="popup" onclick=openPopup()>
+			<div class="popup" id="popup">
 				Items in your cart:
 
-				<div onclick=updatePopupData() class="popup-list" id="itemsList">
+				<div  class="popup-list" id="itemsList">
 				</div>
-				<span> <img id="close" src="images/x-mark-transparent-24.png"></span>
+				<span> <img id="close" onclick="closePopup()" src="images/kisspng-computer-icons-cross-delete-button-desktop-wallpap-treasure-map-5adce4c8b84b75.3905043415244259287549.jpg"></span>
 			</div>
 		</div>
 
@@ -69,7 +69,7 @@
 		</div>
 	</nav>
 	<div class="advertising">
-		<p class="arrow arrow-left"> \< </p> <img id="advertising" src="images/2020-10-20_10-44-59.png">
+		<p class="arrow arrow-left"> < </p> <img id="advertising" src="images/2020-10-20_10-44-59.png">
 				<p class="arrow arrow-right"> ></p>
 	</div>
 
@@ -78,28 +78,31 @@
 	<aside id="recomendation"> РЕКОМЕНДУЕМ </aside>
 
 	<div class="box" id="box">
+		<div  id="loader"><div  id="loader_inner">  </div></div>
 		<div class='product'>
 			<div class="product">
 				<img src="images/1028127514.jpg" width="250px" height="250px">
 				<p>ПРОФЕССИОНАЛЬНАЯ МАШИНКА С АККУМУЛЯТОРНЫМ ПИТАНИЕМ MOSER GENIO PRO FADING EDITION 1874-0053
 					14 200.00 р.</p>
 
-				<button onclick=Test()>В корзину</button>
-				<div  id="loader"><div  id="loader_inner" src="images/loader.gif">  </div></div>
+				<button onclick="changeCart()">В корзину</button>
+				
 			</div>
 
 			<div class="product">
 				<img src="images/1001967791.jpg" width="250px" height="250px">
 				<p>ПРОФЕССИОНАЛЬНАЯ МАШИНКА С КОМБИНИРОВАННЫМ ПИТАНИЕМ MOSER LI+PRO2 1888-0050
 					14 900.00 р.</p>
-				<button onclick=changeCart()>В корзину</button>
+				<button onclick="changeCart()">В корзину</button>
+				
 			</div>
 
 			<div class="product">
 				<img src="images/275.970.jpg" width="250px" height="250px">
 				<p>МАШИНКА С КОМБИНИРОВАННЫМ ПИТАНИЕМ MOSER CHROM2STYLE 1877-0050 / 1877-0051
 					14 800.00 р.</p>
-				<button onclick=changeCart()>В корзину</button>
+				<button onclick="changeCart()">В корзину</button>
+				
 			</div>
 		</div>
 	</div>
