@@ -3,11 +3,10 @@
 	padding: 0;
 }
 .body {
+	display: flex;
 	width: 50%;
 	margin: 50px;
-	clear: both;
 	max-width: 720px;
-	padding-left: 150px;
 }
 
 .div {
@@ -41,17 +40,17 @@
 	/* align-items: center; */
 	/* margin: 0 auto; */
 	transform: translateX(-50%);
+	viewport-fit: width 100px;
+
 }
 #loader_inner {
 	display: flex;
-	background-image: url(images/b7C.gif);
+	background-image: url(images/loader.gif);
 	height: 60px;
 	width: 60px;
 	background-size: contain;
 	visibility: hidden;
-justify-content:center;
-align-items: flex-start;
-align-content: stretch;
+margin: auto;
 	
 }
 #close {
@@ -220,3 +219,23 @@ align-content: stretch;
 	justify-content: center;
 	align-items: center;
 }
+@media (max-width: 1024px) {
+	.body {
+		flex: 0 0 33.3%;
+	
+	}
+}
+
+@media (max-width: 768px) {
+	.body {
+		flex: 0 0 100%;
+	}
+}
+
+@media (max-width: 480px) {
+	.product {
+		flex: 0 0 150%;
+		flex-direction: column;
+	}
+}
+
