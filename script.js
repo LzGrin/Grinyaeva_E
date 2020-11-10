@@ -33,7 +33,7 @@ function updatePopupData() {
     let product = products[id];
     let basketItem = document.createElement("itemsList");
     basketItem.classList.add('basket-item');
-    basketItem.innerText = items[i].title;
+    basketItem.innerText = items[i].product-title;
     basketItem.innerText = items[i].price;
 
     element.appendChild(itemsList);
