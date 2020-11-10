@@ -23,7 +23,7 @@
 				<img id="profileImg" src="images/8b6f5f94a53dbc3c8240347693830120.jpg">
 				<span>Lizaveta G.</span>
 			</div>
-			<div id="basket" class="cart" onclick="openPopup()">
+			<div id="basket" class="card" onclick="openPopup()">
 				0
 				<span>Корзина</span>
 			</div>
@@ -31,29 +31,29 @@
 			<div class="popup" id="popup">
 				Items in your cart:
 
-				<div  class="popup-list" id="itemsList">
-				
-				<br>
-				<div onckick="updatePopupDate()" class="table-responsive">
-					<table class="table table-hover table-bordered">
-						<thead>
-							 <tr>
-							<th>Название</th>
-							<th>Цена</th>
-							<th>Количество</th>
-						</tr>
-						</thead>
-					</table>
+				<div class="popup-list" id="itemsList">
+
+					<br>
+					<div onckick="updatePopupDate()" class="table-responsive">
+						<table class="table table-hover table-bordered">
+							<thead>
+								<tr>
+									<th>Название</th>
+									<th>Цена</th>
+									<th>Количество</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div>
+						Итого:
+						<span id="total-cart-summa"></span>
+						руб.
+					</div>
+					<br>
+					<button class="order">Оформить заказ</button>
 				</div>
-				<div>
-					Итого:
-<span id="total-cart-summa"></span>
-руб.
-				</div>
-				<br>
-				<button class="order">Оформить заказ</button>
-			</div>
-				<span> <img id="close" onclick="closePopup()" src="images/kisspng-computer-icons-cross-delete-button-desktop-wallpap-treasure-map-5adce4c8b84b75.3905043415244259287549.jpg"></span>
+				<span> <img id="close" onclick="closePopup()" src="images/x-mark-transparent-24.png"></span>
 			</div>
 		</div>
 
@@ -89,7 +89,8 @@
 		</div>
 	</nav>
 	<div class="advertising">
-		<p class="arrow arrow-left"> < </p> <img id="advertising" src="images/2020-10-20_10-44-59.png">
+		<p class="arrow arrow-left">
+			< </p> <img id="advertising" src="images/2020-10-20_10-44-59.png">
 				<p class="arrow arrow-right"> ></p>
 	</div>
 
@@ -98,34 +99,139 @@
 	<aside id="recomendation"> РЕКОМЕНДУЕМ </aside>
 
 	<div class="box" id="box">
-		<div  id="loader"><div  id="loader_inner">  </div></div>
-		<div class='product'>
+		<div id="loader">
+			<div id="loader_inner"> </div>
+		</div>
+		<div class='products'>
 			<div class="product">
-				<img src="images/1028127514.jpg" width="250px" height="250px">
-				<p>ПРОФЕССИОНАЛЬНАЯ МАШИНКА С АККУМУЛЯТОРНЫМ ПИТАНИЕМ MOSER GENIO PRO FADING EDITION 1874-0053
-					14 200.00 р.</p>
-
+				<div class="product-link image-container is-square">
+					<img src="images/1028127514.jpg" width="250px" height="250px">
+				</div>
+				<div class="product-price in-card">
+					<div class="price in-card">
+						14 200.00 р.
+					</div>
+				</div>
+				<div class="product-title in-card">
+					Профессиональная машинка с аккумуляторным питанием MOSER GENIO PRO FADING EDITION 1874-0053
+				</div>
 				<button onclick="changeCart()">В корзину</button>
-				
 			</div>
 
 			<div class="product">
-				<img src="images/1001967791.jpg" width="250px" height="250px">
-				<p>ПРОФЕССИОНАЛЬНАЯ МАШИНКА С КОМБИНИРОВАННЫМ ПИТАНИЕМ MOSER LI+PRO2 1888-0050
-					14 900.00 р.</p>
+				<div class="product-link image-container is-square">
+					<img src="images/1001967791.jpg" width="250px" height="250px">
+				</div>
+				<div class="product-price in-card">
+					<div class="price in-card">
+						14 900.00 р.
+					</div>
+				</div>
+				<div class="product-title in-card">Профессиональная машинка с комбинрованным питанием MOSER LI+PRO2
+					1888-0050</div>
 				<button onclick="changeCart()">В корзину</button>
-				
 			</div>
 
 			<div class="product">
-				<img src="images/275.970.jpg" width="250px" height="250px">
-				<p>МАШИНКА С КОМБИНИРОВАННЫМ ПИТАНИЕМ MOSER CHROM2STYLE 1877-0050 / 1877-0051
-					14 800.00 р.</p>
+				<div class="product-link image-container is-square">
+					<img src="images/275.970.jpg" width="250px" height="250px">
+				</div>
+				<div class="product-price in-card">
+					<div class="price in-card">
+						14 800.00 р.
+					</div>
+				</div>
+				<div class="product-title in-card">
+					Машинка с комбинрованным питанием MOSER CHROM2STYLE 1877-0050 / 1877-0051
+				</div>
 				<button onclick="changeCart()">В корзину</button>
-				
+			</div>
+
+			<div class="product">
+				<div class="product-link image-container is-square">
+					<img src="images/e_3.jpg" width="250px" height="250px">
+				</div>
+				<div class="product-price in-card">
+					<div class="price in-card">
+						9 100 р.
+					</div>
+				</div>
+				<div class="product-title in-card">
+					Триммер Wahl Detailer X-Tra Wide 5 Star
+				</div>
+				<button onclick="changeCart()">В корзину</button>
+			</div>
+
+			<div class="product">
+				<div class="product-link image-container is-square">
+					<img src="images/wahl-detailer-t-blade-negra.jpg" width="250px" height="250px">
+				</div>
+				<div class="product-price in-card">
+					<div class="price in-card">
+						14 800 р.
+					</div>
+				</div>
+				<div class="product-title in-card">
+					Профессиональная машинка WAHL MAGIC CLIP CORDLESS METAL EDITION СЕРЕБРИСТЫЙ 8509-016
+				</div>
+				<button onclick="changeCart()">В корзину</button>
+			</div>
+
+			<div class="product">
+				<div class="product-link image-container is-square">
+					<img src="images/wahl-super-taper-p4077-24675_image.jpg" width="250px" height="250px">
+				</div>
+				<div class="product-price in-card">
+					<div class="price in-card">
+						7 100 р.
+					</div>
+				</div>
+				<div class="product-title in-card">Машинка для стрижки Wahl Super Taper</div>
+				<button onclick="changeCart()">В корзину</button>
+			</div>
+
+			<div class="product">
+				<div class="product-link image-container is-square">
+					<img src="images/large_08180-016_web_hero_2-810x810.png" width="250px" height="250px">
+				</div>
+				<div class="product-price in-card">
+					<div class="price in-card">
+						21 800 р.
+					</div>
+				</div>
+				<div class="product-title in-card">Машинка+Триммер Wahl Barber Combo</div>
+				<button onclick="changeCart()">В корзину</button>
+			</div>
+
+			<div class="product">
+				<div class="product-link image-container is-square">
+					<img src="images/large_wahl-8164-finale-profesyonel-kablolu-kablosuz-sac-sakal-kesme-makinesi-1521-jpg.jpeg"
+						width="250px" height="250px">
+				</div>
+				<div class="product-price in-card">
+					<div class="price in-card">
+						11 500 р.
+					</div>
+				</div>
+				<div class="product-title in-card">Бритва WAHL Finale </div>
+				<button onclick="changeCart()">В корзину</button>
+			</div>
+
+			<div class="product">
+				<div class="product-link image-container is-square">
+					<img src="images/large_wahl-3615-0470.jpg" width="250px" height="250px">
+				</div>
+				<div class="product-price in-card">
+					<div class="price in-card">
+						1 750 р.
+					</div>
+				</div>
+				<div class="product-title in-card">Бритва WAHL Mobile Shaver </div>
+				<button onclick="changeCart()">В корзину</button>
 			</div>
 		</div>
 	</div>
-		<footer></footer>
+	<footer></footer>
 </body>
+
 </html>
