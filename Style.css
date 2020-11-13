@@ -50,7 +50,7 @@
 	width: 60px;
 	background-size: contain;
 	visibility: hidden;
-margin: auto;
+    margin: auto;
 	
 }
 #close {
@@ -216,29 +216,29 @@ margin: auto;
 }
 .products  {
 	display: flex;
-flex-direction: row;
-justify-content: space-around ;
-align-items: flex-start;
-align-content: flex-start;
-flex-wrap: wrap;
-border: black;
-	
-}
+	flex-direction: row;
+	justify-content: space-around ;
+	align-items: flex-start;
+	align-content: flex-start;
+	flex-wrap: wrap;
+	border: black;
+	}
 .product {
 	flex-basis: 21%;
-	}
+}
 .product-title.in-card  {
 	display: flex;
-text-align: center;
+	text-align: center;
+	
 	}
 .product-price  {
 	background-color: brown;
-color: rgb(247, 247, 247);
-line-height: 1.6;
-font-size: 1.2rem;
-margin: 0 0.5rem;
-text-align: center;
-width: 100px;
+	color: rgb(247, 247, 247);
+	line-height: 1.6;
+	font-size: 1.2rem;
+	margin: 0 0.5rem;
+	text-align: center;
+	width: 100px;
 	
 }
 @media (max-width: 1024px) {
