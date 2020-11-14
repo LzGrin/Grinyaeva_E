@@ -48,10 +48,10 @@
 .menu_btn > span::after {
 	display: block;
 	position: absolute;
-
 	width: 100%;
 	height: 2px;
 	background-color: #616161;
+	transition-duration: .25s;
 }
 .menu_btn > span::before {
 	content: '';
@@ -67,25 +67,22 @@
 	visibility: hidden;
 	top: 0;
 	left: -100%;
-
-	width: 300px;
-	height: 100%;
-
+	width: 200px;
+	height: 50px;
 	margin: 0;
 	padding: 80px 0;
-
-	background-color: bisque
-	box-shadow: 1px 0 px 6 px rgba(0, 0, 0, .2);
+	padding-left: 80px;
+	background-color: rgb(168, 166, 164);
+	box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+	transition-duration: .25s;
 }
 .menu_item {
 	display: block;
 	padding: 12px 24px;
-
-	color: saddlebrown;
-
 	font-family: 'Courier New', Courier, monospace;
 	font-size: 20px;
 	font-weight: 600;
+	transition-duration: .25s;
 }
 .menu_item:hover {
 	background-color: seagreen;
@@ -120,7 +117,6 @@ transform: rotate(0);
 	/* margin: 0 auto; */
 	transform: translateX(-50%);
 	viewport-fit: width 100px;
-
 }
 #loader_inner {
 	display: flex;
@@ -130,7 +126,6 @@ transform: rotate(0);
 	background-size: contain;
 	visibility: hidden;
     margin: auto;
-	
 }
 #close {
 	display: flex;
@@ -141,8 +136,8 @@ transform: rotate(0);
 	height: 20px;
 }
 .logo {
-width: 200px;
-height: 67px;
+    width: 200px;
+    height: 67px;
 }
 .phone {
 	justify-content: flex-start;
@@ -162,6 +157,11 @@ height: 67px;
 	width: 100px;
 	margin-top: 15px;
 	justify-content: flex-end;
+
+}
+.card img {
+	width: 40px;
+    height: 40px;
 }
 .mode {
 	display: flex;
@@ -206,7 +206,6 @@ height: 67px;
 .dropdown {
 	/*position: absolute;*/
 	display: flex;
-
 }
 .dropdown-content {
 	display: none;
@@ -239,13 +238,12 @@ height: 67px;
 	justify-content: center;
 	margin: 0px;
 	align-items: center;
-
 }
 .title {
     height: 100px;
 }
 .banner {
-	background-image: url(images/2020-10-20_10-44-59.png);
+	background-image: url(images/адвертисинг.png);
 	width: 1085px;
 	height: 355px;
 	background-size: contain;
@@ -281,7 +279,6 @@ height: 67px;
 	
 }
 .nav {
-
 	margin: 0 auto;
 	width: 50%;
 }
@@ -313,8 +310,7 @@ height: 67px;
 .product-title.in-card  {
 	display: flex;
 	text-align: center;
-	
-	}
+}
 .product-price  {
 	background-color: brown;
 	color: rgb(247, 247, 247);
@@ -349,5 +345,11 @@ height: 67px;
 	}
 	.header {
 		flex: 0 0 15%;
+	}
+}
+@media (max-width: 375) {
+	.menu_box {
+	    box-sizing: border-box;
+		
 	}
 }
