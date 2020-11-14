@@ -5,7 +5,7 @@ var itemsList = document.getElementById('itemsList');
 var items = [];
 
 function changeCart(title, price, id) {
-  var basketElement = document.getElementById('basket');
+  let basketElement = document.getElementById('basket');
   counter++;
   basketElement.innerText = counter;
 
@@ -22,16 +22,18 @@ function changeCart(title, price, id) {
   let itemsTitle = '';
   let itemsPrice = '';
 
-  for (let i = 0; i < items.length; i++) {
+  array.forEach(element => {
+    
+  }); 
     itemsIds += items[i].id;
     itemsTitle += items[i].title;
     itemsPrice += items[i].price;
-  }
+  
   document.getElementById('itemsList').innerHTML = itemsIds;
   document.getElementById('itemsList').innerHTML = itemsTitle;
   document.getElementById('itemsList').innerHTML = itemsPrice;
-}
 
+}
 
 
 showLoader(function () {
