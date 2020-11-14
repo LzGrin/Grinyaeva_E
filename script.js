@@ -17,23 +17,25 @@ function changeCart(title, price, id) {
     id: id,
     count: 1
   });
-
+}
   let itemsIds = '';
   let itemsTitle = '';
   let itemsPrice = '';
 
-  array.forEach(element => {
-    
-  }); 
+  items.forEach((element) => {
+    console.log(element)
     itemsIds += items[i].id;
+      document.getElementById('itemsList').innerHTML = itemsIds
+  }); 
+    /*itemsIds += items[i].id;
     itemsTitle += items[i].title;
     itemsPrice += items[i].price;
   
   document.getElementById('itemsList').innerHTML = itemsIds;
   document.getElementById('itemsList').innerHTML = itemsTitle;
-  document.getElementById('itemsList').innerHTML = itemsPrice;
+  document.getElementById('itemsList').innerHTML = itemsPrice;*/
 
-}
+
 
 
 showLoader(function () {
