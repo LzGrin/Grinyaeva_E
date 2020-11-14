@@ -14,7 +14,7 @@
 	<header>
 		<div class="container">
 			<div class="logo">
-				<a href="images/2020-10-19_20-46-19.png"> </a>
+				<img src="images/2020-10-19_20-46-19.png" alt="Картинка">
 			</div>
 
 			<div class="phone">
@@ -27,6 +27,18 @@
 			<div id="basket" class="card" onclick="openPopup()">
 				0
 				<span>Корзина</span>
+			</div>
+
+			<div class="hamburger-menu">
+				<input type="checkbox" id="menu_toggle">
+				<label for="menu_toggle" class="menu_btn">
+					<span></span>
+				</label>
+				<ul class="menu_box">
+					<li class="menu-item">Каталог</li>
+					<li class="menu-item">Вход в личный кабинет</li>
+					<li class="menu-item">Корзина</>
+					</ul>
 			</div>
 
 			<div class="popup" id="popup">
@@ -61,7 +73,6 @@
 		<div>
 			<div class="mode">
 				09:00 - 20:00 пн - пт, 10:00 - 18:00 сб - вс
-				<img class=logo2 src="images/2020-10-19_20-46-19.png">
 				<p><input type="search" name="q" placeholder="Поиск по каталогу"> <input id="search" type="submit"
 						value="Найти"></p>
 			</div>
@@ -90,9 +101,9 @@
 		</div>
 	</nav>
 	<div class="advertising">
-		<p class="arrow arrow-left">
-			< </p> <img id="advertising" src="images/2020-10-20_10-44-59.png">
-				<p class="arrow arrow-right"> ></p>
+		<div class="arrow arrow-left">
+			< </div> <div class="banner"></div>
+				<div class="arrow arrow-right"> ></div>
 	</div>
 
 	<div id="description"> Фирменный магазин Moser, Wahl и Ermila, официальный дистрибьютор Moser в России</div>
@@ -244,3 +255,4 @@
 </body>
 
 </html>
+				
