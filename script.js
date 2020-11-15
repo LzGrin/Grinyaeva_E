@@ -1,66 +1,44 @@
-var counter = 0;
-var title = document.getElementById('.title');
-var price = document.getElementById('.price');
-var itemsList = document.getElementById('itemsList');
-var items = [];
+let counter = 0;
+const itemsList = document.getElementById('itemsList');
+let items = new Map();
+const basketElement = document.getElementById('basket-counter');
+const popup = document.getElementById('popup');
+const loader = document.getElementById('loader');
 
-function changeCart(title, price, id) {
-  let basketElement = document.getElementById('basket');
+function changeCart(title, price, articul) {
   counter++;
   basketElement.innerText = counter;
 
-  var table = document.getElementById('.table');
-
-  items.push({
-    title: title,
-    price: price,
-    id: id,
-    count: 1
-  });
-}
-  let itemsIds = '';
-  let itemsTitle = '';
-  let itemsPrice = '';
-
-  items.forEach((element) => {
-    console.log(element)
-    itemsIds += items[i].id;
-      document.getElementById('itemsList').innerHTML = itemsIds
-  }); 
-    /*itemsIds += items[i].id;
-    itemsTitle += items[i].title;
-    itemsPrice += items[i].price;
+ if (items.has(articul)) {
+  items.get(articul).count++;
+ } else {
+  items.set(articul, {title, price, "count":1});
+ } 
   
-  document.getElementById('itemsList').innerHTML = itemsIds;
-  document.getElementById('itemsList').innerHTML = itemsTitle;
-  document.getElementById('itemsList').innerHTML = itemsPrice;*/
+}
 
-
-
-
-showLoader(function () {
-  hideLoader();
-  openPopup();
-});
 
 
 function openPopup() {
-  let popup = document.getElementById('popup');
-  popup.style.visibility = 'visible';
+  loader.style.visibility = 'visible';
+  setTimeout(() => {
+    let templete = ``;
+    items.forEach(({title, price, count} ) => {
+      /*const {title, price} = element*/
+      templete += `
+          <div class="product-line">
+          <div class="product-line-item">${title}</div>
+          <div class="product-line-item">${price}</div>
+          <div class="product-line-item">${count}</div>
+          </div>
+       `;
+     });
+    itemsList.innerHTML = templete;
+    loader.style.visibility = 'hidden';
+    popup.style.visibility = 'visible';
+  }, 5000);
 }
 
 function closePopup() {
-  let popup = document.getElementById('popup');
   popup.style.visibility = 'hidden';
-}
-
-function showLoader(callback) {
-  let loader = document.getElementById('loader_inner');
-  loader.style.visibility = 'visible';
-  setTimeout(callback, 5000);
-}
-
-function hideLoader() {
-  let loader = document.getElementById('loader_inner');
-  loader.style.visibility = 'hidden';
 }
