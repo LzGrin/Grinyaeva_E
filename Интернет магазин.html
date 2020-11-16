@@ -6,17 +6,14 @@
 	<meta http-equiv='Content-type' content='text/html;charset=UTF-8' />
 	<link rel="icon" type="image/png" sizes='32x32' href="67001731a7365acb1d5f0642bea25292.jpg">
 	<link rel="stylesheet" type="text/css" href="Style.css">
-	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
 	<header class="header">
-
 		<div class="logo">
 			<img src="images/лого.png" alt="Картинка">
 		</div>
-
 
 		<div class="search">
 			<input type="search" name="q" placeholder="Поиск по каталогу"> <input id="search" type="submit"
@@ -29,75 +26,81 @@
 			<span id="basket-counter" class="basket-counter">0</span>
 		</div>
 
-		
+
 		<div class="profile">
-			<img id="profileImg" src="images/корзина.jpg">
+			<img class="profileImg" src="images/профиль.jpg">
 			<span class="profile-name">Lizaveta G.</span>
 		</div>
 
 
 		<div class="popup" id="popup">
-			Items in your cart:
+
+			<span class="product-in-basket">In your cart:<img class="close" id="close" onclick="closePopup()"
+					src="images/крестикпопап.png"></span>
+
+
 			<div class="product-line">
-				<div class="product-line-item">Наименование</div>
-				<div class="product-line-item">Цена</div>
-				<div class="product-line-item">Кол-во</div>
-				</div>
+				<div class="product line-item">Наименование</div>
+				<div class="product line-item">Цена</div>
+				<div class="product line-item">Кол-во</div>
+			</div>
+
 			<div class="popup-list" id="itemsList">
-			<span> <img class="close" id="close" onclick="closePopup()" src="images/крестикпопап.png"></span>
+			</div>
 		</div>
-	
 	</header>
 
 	<div class="header-mobile">
 		<div class="menu-mobile">
-			
-			<div class="menu-mobile-icon"></div>
-			<div class="menu-box">
-				<div class="dropdown menu-item">
-					<button class="dropbtn">Каталог</button>
-					<div class="dropdown-content">
-						<a href="#">Машинки для стрижки волос</a>
-						<a href="#">Триммеры </a>
-						<a href="#">Электробритвы / Шейверы</a>
-						<a href="#">Парикмахерские принадлежности</a>
-						<a href="#">Фены</a>
-						<a href="#">Плойки и утюжки</a>
-						<a href="#">Косметика</a>
-						<a href="#">Ножницы</a>
-						<a href="#">Профессиональный груминг</a>
-						<a href="#">Аксессуары для машинок и триммеров</a>
+
+			<div class="menu-mobile-icon">
+				<div class="menu-box">
+					<div class="dropdown menu-item">
+						<a href="#" class="knopka menu-item">Каталог</a>
+						<div class="dropdown-content">
+							<a href="#">Машинки для стрижки волос</a>
+							<a href="#">Триммеры </a>
+							<a href="#">Электробритвы / Шейверы</a>
+							<a href="#">Парикмахерские принадлежности</a>
+							<a href="#">Фены</a>
+							<a href="#">Плойки и утюжки</a>
+							<a href="#">Косметика</a>
+							<a href="#">Ножницы</a>
+							<a href="#">Профессиональный груминг</a>
+							<a href="#">Аксессуары для машинок и триммеров</a>
+						</div>
 					</div>
+					<div class="action menu-item">Акции</div>
+					<div class="pay menu-item">Доставка и оплата</div>
+					<div class="contact menu-item">Контакты</div>
 				</div>
-				<div class="menu-item">Акции</div>
-				<div class="menu-item">Доставка и оплата</div>
-				<div class="menu-item">Контакты</div>
 			</div>
-			
+
 		</div>
 		<div class="mobile-search">
 			<input type="search" name="q" placeholder="Поиск по каталогу"> <input id="search" type="submit"
 				value="Найти">
 		</div>
 	</div>
-	
+
 
 	<nav class="menu">
 
 		<div class="dropdown menu-item">
-			<button class="dropbtn">Каталог</button>
-			<div class="dropdown-content">
-				<a href="#">Машинки для стрижки волос</a>
-				<a href="#">Триммеры </a>
-				<a href="#">Электробритвы / Шейверы</a>
-				<a href="#">Парикмахерские принадлежности</a>
-				<a href="#">Фены</a>
-				<a href="#">Плойки и утюжки</a>
-				<a href="#">Косметика</a>
-				<a href="#">Ножницы</a>
-				<a href="#">Профессиональный груминг</a>
-				<a href="#">Аксессуары для машинок и триммеров</a>
-			</div>
+			<a href="#" class="knopka menu-item">Каталог
+				<div class="dropdown-content">
+					<a href="#">Машинки для стрижки волос</a>
+					<a href="#">Триммеры </a>
+					<a href="#">Электробритвы / Шейверы</a>
+					<a href="#">Парикмахерские принадлежности</a>
+					<a href="#">Фены</a>
+					<a href="#">Плойки и утюжки</a>
+					<a href="#">Косметика</a>
+					<a href="#">Ножницы</a>
+					<a href="#">Профессиональный груминг</a>
+					<a href="#">Аксессуары для машинок и триммеров</a>
+				</div>
+			</a>
 		</div>
 		<div class="action menu-item">Акции</div>
 		<div class="pay menu-item">Доставка и оплата</div>
@@ -105,16 +108,17 @@
 	</nav>
 
 	<div class="banner-container">
-		<div class="arrow arrow-left">< </div>
-		<div class="banner"></div>
-		<div class="arrow arrow-right"> ></div>
-	</div>
+		<div class="arrow arrow-left">
+			< </div>
+				<div class="banner"></div>
+				<div class="arrow arrow-right"> ></div>
+		</div>
 
 
-		<h2 id="recomendation"> РЕКОМЕНДУЕМ </h2>
+		<h2 class="recomendation"> РЕКОМЕНДУЕМ </h2>
 
 		<div class="box" id="box">
-		
+
 			<div class='products'>
 				<div class="product">
 					<div class="product-link image-container is-square">
@@ -253,7 +257,7 @@
 
 
 			<footer></footer>
-			<div class="loader" id="loader" >
+			<div class="loader" id="loader">
 				<div class="loader_inner"> </div>
 			</div>
 			<script type="text/javascript" src="script.js"></script>
