@@ -26,7 +26,8 @@ padding: 0 40px;
 }
 .close {
 	width: 40px;
-    height: 40px;
+	height: 40px;
+	display: flex;
 }
 .basket {
 	margin-right:  40px;
@@ -41,6 +42,10 @@ padding: 0 40px;
 .basket-counter {
 	position: absolute;
 }
+.profileImg {
+	width: 40px;
+    height: 40px;
+}
 
 .menu-mobile {
 	cursor: pointer;
@@ -48,9 +53,10 @@ padding: 0 40px;
 	
 }
 .menu-mobile-icon {
-	width: 26px;
-	height: 26px;
-	background-color: royalblue;
+	width: 40px;
+	height: 40px;
+	background-image: url(images/бургер.jpg);
+	background-size: contain;
 }
 
 .menu-box {
@@ -69,6 +75,11 @@ padding: 0 40px;
 	font-size: 20px;
 	font-weight: 600;
 	white-space: nowrap;
+	color: black;
+	line-height: 40px;
+	flex: 1;
+	text-align: center;
+	line-height: 40px;
 }
 .menu-item:hover {
 	background-color: seagreen;
@@ -78,11 +89,7 @@ padding: 0 40px;
 	align-items: center;
 
 }
-.menu-item {
-	flex: 1;
-	text-align: center;
-	line-height: 40px;
-}
+
 .popup {
 	position: fixed;
 	top: 40px;
@@ -93,10 +100,42 @@ padding: 0 40px;
 	border: 1px solid;
 	background: #fff;
 	display: flex;
-	/* align-items: center; */
-	/* margin: 0 auto; */
+	overflow: auto;
 	transform: translateX(-50%);
 	color: black;
+	flex-direction: column;
+}
+.popup-list {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	width: 20px;
+	height: 20px;
+	top: 30px;
+	flex-direction: column;
+}
+.product-in-basket {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 20px;
+}
+.product-line {
+	display: flex;
+	top: 20px;
+	flex-direction: row;
+    flex-basis: 5%;
+	padding: 20px;
+    margin: 0 20px;
+}
+	
+
+.product-line-item {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 33%;
+	padding:  20px;
+
 }
 .banner-container {
 	display: flex;
@@ -131,6 +170,7 @@ padding: 0 40px;
 	justify-content: flex-end;
 	width: 20px;
 	height: 20px;
+	top: 0;
 }
 
 .phone {
@@ -170,38 +210,21 @@ padding: 0 40px;
 .src {
 	size: 30px;
 }
-.main {
-	display: flex;
-	justify-content: space-around;
-	align-items: baseline;
-	background-color: red;
 
-}
-.main > div {
+.knopka {
 	display: flex;
-	justify-content: space-around;
-	align-items: baseline;
-	border: 1px solid #ccc;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-.main > div:last-child {
-	margin-right: 0;
-}
-.dropbtn {
-	display: flex;
-
-	background-color: red;
-	border: none;
-	font-size: 16px;
-}
+	color: black; /* цвет текста */
+	text-decoration: none; /* убирать подчёркивание у ссылок */
+	user-select: none; /* убирать выделение текста */
+	background: white; /* фон кнопки */
+	outline: none; /* убирать контур в Mozilla */
+  } 
+  .knopka:hover { background: seagreen; } /* при наведении курсора мышки */
+  .knopka:active { background:seagreen; } /* при нажатии */
 .dropdown {
-	position: relative;
 	display: flex;
 }
 .dropdown-content {
-
 	display: none;
     position: absolute;
     background-color: white;
@@ -217,24 +240,11 @@ padding: 0 40px;
 }
 .dropdown-content a:hover {background-color: #ddd;}
 .dropdown:hover .dropdown-content {display: block;}
-.dropdown:hover .dropbtn {background-color: red;}
+.dropdown:hover .knopka {background-color: seagreen;}
 .select {
 }
-.action {
-	display: flex;
-}
-.pay {
-	display: flex;
-}
-.contact {
-	display: flex;
-}
-.advertising {
-	display: flex;
-	justify-content: center;
-	margin: 0px;
-	align-items: center;
-}
+
+
 .title {
     height: 100px;
 }
@@ -261,11 +271,12 @@ padding: 0 40px;
 
 
 }
-#recomendation {
+.recomendation {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	padding-left: 50px;
+margin: 40px;
 }
 .img {
 	width: 250px; 
