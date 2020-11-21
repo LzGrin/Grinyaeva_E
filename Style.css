@@ -52,11 +52,10 @@ padding: 0 40px;
 	position: relative;
 	
 }
-.menu-mobile-icon {
+.menu-mobile_icon {
 	width: 40px;
 	height: 40px;
-	background-image: url(images/бургер.jpg);
-	background-size: contain;
+	background-image: url(images/бургер.png)
 }
 
 .menu-box {
@@ -109,7 +108,6 @@ padding: 0 40px;
 	display: flex;
 	align-items: flex-start;
 	justify-content: flex-start;
-	width: 20px;
 	height: 20px;
 	top: 30px;
 	flex-direction: column;
@@ -126,7 +124,7 @@ padding: 0 40px;
 	flex-direction: row;
     flex-basis: 5%;
 	padding: 20px;
-    margin: 0 20px;
+    border: 10px black;
 }
 	
 
@@ -134,8 +132,8 @@ padding: 0 40px;
 	display: flex;
 	flex-direction: column;
 	flex-basis: 33%;
-	padding:  20px;
-
+	padding:  inherit;
+	
 }
 .banner-container {
 	display: flex;
