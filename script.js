@@ -5,6 +5,7 @@ const basketElement = document.getElementById('basket-counter');
 const popup = document.getElementById('popup');
 const loader = document.getElementById('loader');
 
+
 function changeCart(title, price, articul) {
   counter++;
   basketElement.innerText = counter;
@@ -28,17 +29,69 @@ function openPopup() {
       templete += `
           <div class="product-line">
           <div class="product-line-item">${title}</div>
-          <div class="product-line-item">${price}</div>
-          <div class="product-line-item">${count}</div>
-          </div>
+          <div class="app"></div>
+         
+				<div class ="count" >
+				  <button type="button" class="jsDecrease">-</button>
+				  <input type="text" class="jsValue" value="${count}">
+				  <button type="button" class="jsIncrease">+</button>
+				</div>
+        </div>
+        <div class="product-line-item">${price}</div>
+          
+          
+
        `;
+     
+    
      });
+    
     itemsList.innerHTML = templete;
     loader.style.visibility = 'hidden';
     popup.style.visibility = 'visible';
-  }, 5000);
+    
+    
+  }, 2000);
 }
+
+class Total {
+
+  set value(val) {
+    this.valueInput.value = isNaN(val) ? 0 : val;
+  }
+
+  get value() {
+    return +this.valueInput.value;
+  }
+
+constructor(wrapper) {
+  const total = document.getElementById('total');
+  const content = document.importNode(total.content, true);
+  
+  this.valueInput = content.querySelector('.jsValue');
+  this.decreaseButton = content.querySelector('.jsDecrease');
+  this.increaseButton = content.querySelector('.jsIncrease');
+
+  this.valueInput.onblur = event => this.value = event.target.value;
+  this.increaseButton.onclick = () => this.increase();
+  this.decreaseButton.onclick = () => this.decrease();
+
+  wrapper.appendChild(content);
+}
+
+increase() {
+  this.value++;
+}
+
+decrease() {
+  this.value--;
+}
+}
+const appNode = document.querySelector('.app');
+new Total(appNode);
+
 
 function closePopup() {
   popup.style.visibility = 'hidden';
 }
+
