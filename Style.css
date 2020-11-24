@@ -104,6 +104,7 @@ padding: 0 40px;
 	color: black;
 	flex-direction: column;
 }
+
 .popup-list {
 	display: flex;
 	align-items: flex-start;
@@ -134,6 +135,34 @@ padding: 0 40px;
 	flex-basis: 33%;
 	padding:  inherit;
 	
+}
+.app {
+	display: flex;
+	flex-direction: column;
+	width: 50px;
+
+}
+.count {
+	display: flex;
+	flex-direction: row;
+	height: 20px;
+	
+}
+
+.jsDecrease {
+	display: flex;
+	width: 20px;
+	flex-direction: row;
+}
+.jsValue {
+	display: flex;
+	width: 20px;
+	flex-direction: row;
+}
+.jsIncrease {
+	display: flex;
+	flex-direction: row;
+	width: 20px;
 }
 .banner-container {
 	display: flex;
