@@ -108,16 +108,16 @@ class popup {
 
       openPopup();
     }
-
+  
     
     let closePopup = () => {
       popup.style.visibility = 'hidden';
     }
     closePopup();
 
+  }
 
-
-
+}
 
 
 
@@ -167,14 +167,14 @@ class popup {
  
 }*/
 
-    class count {
+    /*class count {
 
     }
 
 
     class info {
 
-    }
+    }*/
 
 
 
