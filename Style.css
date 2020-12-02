@@ -136,13 +136,22 @@ padding: 0 40px;
 	padding:  inherit;
 	
 }
-.app {
+#total {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+}
+.text {
+	min-width: 200px;
+}
+#app {
+	min-height: 200px;
 	display: flex;
 	flex-direction: column;
-	width: 50px;
-
+	justify-content: flex-end;
+	padding: 10px;
 }
-.count {
+#count {
 	display: flex;
 	flex-direction: row;
 	height: 20px;
