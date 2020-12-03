@@ -1,119 +1,98 @@
-const countElement = document.getElementById('wrapper');
+let counter = 0;
 
-const appElement = document.getElementById('app');
-const rows = [];
-const newPopup = new Popup();
-const popup = document.getElementById('popup');
-const loader = document.getElementById('loader');
+let items = new Map();
+const basketElement = document.getElementById('basket-counter');
 
-class form {
-  constructor(wrapper) {
-    const template = document.getElementById("form");
-    const content = document.importNode(template.content, true);
-    this.firstNameField = comtent.querySelector(".jsFirstName");
-    this.firstNameField.NameField.onclick = (event) => {
-      this.onNameChange(event.target.value);
-    };
-    wrapper.appendChild(content);
+
+let changeCart = (title, price, articul) => {
+  counter++;
+  basketElement.innerText = counter;
+
+  if (items.has(articul)) {
+    items.get(articul).count++;
+  } else {
+    items.set(articul, { title, price, "count": 1 });
   }
 
-  set firstName(newFirstName) {
-    this.firstNameField.value = newFirstName;
-  }
-}
-
-
-class total {
-
-  set firstName(price) {
-    this.firstNameText.innerText = price;
-    this.form.firstName = price;
+changeCart(title, price, articul);
   }
 
-  get firstName() {
-    return this.firstNameText.innerText;
-  }
-
-  constructor() {
-    const template = document.getElementById("total");
-    const content = document.importNode(template.content, true);
-    this.firstNameText = content.querySelector(".product-line");
-    
-    this.valueInput = content.querySelector('.jsValue');
-    this.decreaseButton = content.querySelector('.jsDecrease');
-    this.increaseButton = content.querySelector('.jsIncrease');
-
-    this.valueInput.onblur = event => this.value = event.target.value;
-    this.increaseButton.onclick = () => this.increase();
-    this.decreaseButton.onclick = () => this.decrease();
-
-    wrapperElement.appendChaild(content);
-  }
-
-  increase() {
-    this.value++;
-  }
-
-  decrease() {
-    this.value--;
-  }
-}
-    let formWrapper = content.querySelector(".jsRowForm");
-    this.form = new form(formWrapper);
-    this.form.onNameChange = (price) => {
-    this.firstNameText.innerText = price;
-    this.onRowChange(price);
-    };
-
-    
+let openPopup = () => {
+  loader.style.visibility = 'visible';
   
+  openPopup();
+}
 
- 
 
-creatRow = (newPrice) => {
-  const newRow = new rows();
-  newRow.onRowChange = (price) => {
-    appElement.innerHTML = `
-    <div>${price}</div>
-    <div>
-    ${rows.map((total) => total.firstName)}
-    </div>
-    `;
-  };
-  newRowFirstPrice = newPrice;
-  rows.push(newRow);
-};
 
-class Popup {
 
-  constructor() {
-    let counter = 0;
-    const itemsList = document.getElementById('itemsList');
-    let items = new Map();
-    const basketElement = document.getElementById('basket-counter');
-   
+  class Popup {
 
-    let changeCart = (title, price, articul) => {
-      counter++;
-      basketElement.innerText = counter;
-
-      if (items.has(articul)) {
-        items.get(articul).count++;
-      } else {
-        items.set(articul, { title, price, "count": 1 });
-      }
+    row() {
 
     }
-    changeCart(title, price, articul);
   }
 
-    let openPopup = () => {
-      loader.style.visibility = 'visible';
-      setTimeout(() => {
-        let templete = ``;
-        items.forEach(({ title, price, count }) => {
-          const { title, price } = element
-          templete += `
+  class Counter {
+
+    set value(val) {
+      this.valueInput.value = isNaN(val) ? 0 : val;
+    }
+
+    get value() {
+      return +this.valueInput.value;
+    }
+
+    constructor() {
+
+      const count = document.getElementById('count');
+      const content = document.importNode(count.content, true);
+
+
+      this.valueInput = content.querySelector('.jsValue');
+      this.decreaseButton = content.querySelector('.jsDecrease');
+      this.increaseButton = content.querySelector('.jsIncrease');
+
+      this.valueInput.onblur = event => this.value = event.target.value;
+      this.increaseButton.onclick = () => this.increase();
+      this.decreaseButton.onclick = () => this.decrease();
+
+      count.appendChild(content);
+    }
+    increase() {
+      this.value++;
+    }
+
+    decrease() {
+      this.value--;
+    }
+
+
+  }
+
+  const appNode = document.querySelector('.app');
+  new Counter(appNode);
+
+  const counter = new Counter(appNode);
+  counter.increase();
+
+
+  class Product {
+
+    constructor(row) {
+      const row = document.getElementById('row');
+      const content = document.importNode(row.content, true);
+
+      this.product = content.querySelector('.product');
+      this.count = content.
+      const itemsList = document.getElementById('itemsList');
+  }
+
+  setTimeout()  {
+    let row = ``;
+    items.forEach(({ title, price, count }) => {
+      const { title, price } = element
+      row += `
               <div class="product-line">
               <div class="product-line-item">${title}</div>
                <div class="product-line-item">${price}</div>
@@ -122,28 +101,13 @@ class Popup {
               
            `;
 
-        });
+    });
 
-        itemsList.innerHTML = templete;
-        loader.style.visibility = 'hidden';
-        popup.style.visibility = 'visible';
+    itemsList.innerHTML = templete;
+    loader.style.visibility = 'hidden';
+    popup.style.visibility = 'visible';
 
 
-      }, 2000);
-
-      openPopup();
-    }
-    
-    let newPopup = new Popup(title, price, articul);
+  }, 2000;
   
-  
-    
-    let closePopup = () => {
-      popup.style.visibility = 'hidden';
-    }
-    closePopup();
-
-
-
-class info {
-}
+  }
