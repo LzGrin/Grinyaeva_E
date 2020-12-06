@@ -72,7 +72,7 @@ class Popup {
 }
 
 
-openPopup();
+
 
 function openPopup()  {
 
