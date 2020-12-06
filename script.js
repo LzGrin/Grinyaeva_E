@@ -1,3 +1,5 @@
+const wrapperElement = document.getElementById("wrapper");
+
 class Counter {
 
     set value(val) {
@@ -53,8 +55,7 @@ class Row {
         row.appendChild(content);
     }
 }
-const wrapperElement = document.getElementById("wrapper");
-const newPopup = new Popup(wrapperElement);
+
 
 class Popup {
 
@@ -62,11 +63,20 @@ class Popup {
         const newPopup = document.getElementById("jsPopup");
         const content = document.importNode(newPopup.content, true);
 
-        const newRow = content.getElementById("jsRowPopup");
+        const newRow = content.querySelector(".jsRowPopup");
         this.newRowPopup = new Row(newRow);
 
         popup.appendChild(content);
 
     }
+}
+
+
+openPopup();
+
+function openPopup()  {
+
+    const newPopup = new Popup(wrapperElement);
+
 }
 
