@@ -1,127 +1,72 @@
-const countElement = document.getElementById('wrapper');
-
-const appElement = document.getElementById('app');
-const rows = [];
-
-class Row {
-  constructor(wrapper) {
-    const row = document.getElementById("row");
-    const content = document.importNode(row.content, true);
-
-    this.priceTotalField = comtent.querySelector(".jsPriceTotal");
-    this.priceTotalField.PriceField.onblur = (event) => {
-      this.onNameChange(event.target.value);
-    }
-      this.products = content.querySelector(".product-line");
-    
-    new Counter(infoCounter);
-    this.form.onNameChange = (price) => {
-      this.firstNameText.innerText = price;
-      this.onRowChange(price);
-    };
-    wrapper.appendChild(content);
-   
-    };
-
-    set priceTotal(newPriceTotal) {
-    this.priceTotalField.value = newPriceTotal;
-  }
-}
-
-
-
 class Counter {
 
-  constructor(infoCounter) {
-    const counter = document.getElementById("counter");
-    const content = document.importNode(counter.content, true);
+    set value(val) {
+        this.valueInput.value = isNaN(val) ? 0 : val;
+    }
 
-    infoCounter.appendChaild(content);
-  }
+    get value() {
+        return +this.valueInput.value;
+    }
 
-  set firstName(name) {
-    this.firstNameText.innerText = name;
-    this.form.firstName = name;
-  }
+    constructor(wrapper) {
+        const template = document.getElementById('counterTemplate');
+        const content = document.importNode(template.content, true);
 
-  get firstName() {
-    return this.firstNameText.innerText;
-  }
+        this.valueInput = content.querySelector('.jsValue');
+        this.decreaseButton = content.querySelector('.jsDecrease');
+        this.increaseButton = content.querySelector('.jsIncrease');
 
+        this.valueInput.onblur = event => this.value = event.target.value;
+        this.increaseButton.onclick = () => this.increase();
+        this.decreaseButton.onclick = () => this.decrease();
 
-creatRow = (newPrice) => {
-  const newRow = new rows();
-  newRow.onRowChange = (price) => {
-    NewPrice.innerHTML = `
-    <div>${price}</div>
-    <div>
-    ${rows.map((total) => total.firstName)}
-    </div>
-    `;
-  };
-  newRowFirstName = newPrice;
-  rows.push(newRow);
-};
+        wrapper.appendChild(content);
+    }
+
+    increase() {
+        this.value++;
+    }
+
+    decrease() {
+        this.value--;
+    }
+
 }
 
+const appNode = document.querySelector('.app');
+/*new Counter(appNode);
+ 
+const counter = new Counter(appNode);
+counter.value = 25;
+counter.increase();*/
+
+class Row {
+
+    constructor(row) {
+        const template = document.getElementById('row');
+        const content = document.importNode(template.content, true);
+        this.price = content.querySelector(".price");
+
+        const counter = content.querySelector(".counter");
+        this.newCounter = new Counter(counter);
+
+        row.appendChild(content);
+    }
+}
+const wrapperElement = document.getElementById("wrapper");
+const newPopup = new Popup(wrapperElement);
 
 class Popup {
 
-  constructor() {
-    const wrapper = document.querySelector('.wrapper');
-    new Row(wrapper);
-  }
+    constructor(popup) {
+        const newPopup = document.getElementById("jsPopup");
+        const content = document.importNode(newPopup.content, true);
+
+        const newRow = content.getElementById("jsRowPopup");
+        this.newRowPopup = new Row(newRow);
+
+        popup.appendChild(content);
+
+    }
 }
-    let counter = 0;
-    const itemsList = document.getElementById('itemsList');
-    let items = new Map();
-    const basketElement = document.getElementById('basket-counter');
-    const popup = document.getElementById('popup');
-    const loader = document.getElementById('loader');
-
-    let changeCart = (title, price, articul) => {
-      counter++;
-      basketElement.innerText = counter;
-
-      if (items.has(articul)) {
-        items.get(articul).count++;
-      } else {
-        items.set(articul, { title, price, "count": 1 });
-      }
-
-    }
-
-        changeCart(title, price, articul);
-
-    let openPopup = () => {
-      loader.style.visibility = 'visible';
-      setTimeout(() => {
-        let templete = ``;
-        items.forEach(({ title, price, count }) => {
-          const { title, price } = element
-          templete += `
-              <div class="product-line">
-              <div class="product-line-item">${title}</div>
-               <div class="product-line-item">${price}</div>
-              <div class="product-line-item">${count}</div>
-            </div>                     
-              
-           `;
-
-        });
-
-        itemsList.innerHTML = templete;
-        loader.style.visibility = 'hidden';
-        popup.style.visibility = 'visible';
-
-
-      }, 2000);
-    }
-      openPopup();
-
-
-    let closePopup = () => {
-      popup.style.visibility = 'hidden';
-    }
-    closePopup();
 
