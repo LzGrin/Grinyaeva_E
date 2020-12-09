@@ -32,22 +32,22 @@
 			<span class="profile-name">Lizaveta G.</span>
 		</div>
 
-
-		<div class="popup" id="popup">
-			<span class="product-in-basket">In your cart:<img class="close" id="close" onclick="closePopup()"
-					src="images/крестикпопап.png"></span>
-			<div class="product-line">
-				<div class="product-line-item">Наименование</div>
-				<div class="product-line-item">Кол-во</div>
-				<div class="product-line-item">Цена</div>
+		<template id="popup">
+			<div class="popup">
+				<span class="product-in-basket">In your cart:<img class="close" id="close" onclick="closePopup()"
+						src="images/крестикпопап.png"></span>
+				<div class="product-line">
+					<div class="product-line-item">Наименование</div>
+					<div class="product-line-item">Кол-во</div>
+					<div class="product-line-item">Цена</div>
+				</div>
+				<div class="popup-list" id="itemsList"></div>
 			</div>
-			<div class="popup-list" id="itemsList"></div>
-		
-		</div>
-		<template id="jsPopup">Продукты в корзине
+		</template>
+		<!-- <template id="jsPopup">Продукты в корзине
 			<div type="text" class="jsRowPopup"></div>
 			<button onclick="closePopup()"type="button" class="closePopup">X</button>
-		</template>
+		</template> -->
 		<div class="app"></div>
 		<template id="counterTemplate">
 			<div>
@@ -64,12 +64,12 @@
 				<div class="close">x</div>
 			</div>
 		</template>
-			  <main>
-				<div id="wrapper"></div>
-			  </main> 
-			  <!-- <button  onclick="openPopup()">Купить</button> -->
-			 
-		
+		<main>
+			<div id="wrapper"></div>
+		</main>
+		<!-- <button  onclick="openPopup()">Купить</button> -->
+
+
 	</header>
 
 	<div class="header-mobile">
