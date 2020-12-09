@@ -136,22 +136,18 @@ padding: 0 40px;
 	padding:  inherit;
 	
 }
-#total {
-	display: flex;
-	align-items: center;
-	padding: 10px;
-}
+
 .text {
 	min-width: 200px;
 }
-#app {
+.app {
 	min-height: 200px;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
 	padding: 10px;
 }
-#count {
+.counter {
 	display: flex;
 	flex-direction: row;
 	height: 20px;
