@@ -64,10 +64,10 @@ class Row {
 class Popup {
 
   constructor(popup) {
-    let newPopupRow = document.getElementById("jsPopup");
+    let newPopupRow = document.getElementById("popup");
     const content = document.importNode(newPopupRow.content, true);
 
-    const newRow = content.querySelector(".jsRowPopup");
+    const newRow = content.querySelector(".popup-list");
     this.newRowPopup = new Row(newRow);
 
     popup.appendChild(content);
@@ -101,6 +101,4 @@ let changeCart = (title, price, articul) => {
 
 }
 
-changeCart(title, price, articul);
-
-
+ changeCart(title, price, articul);
