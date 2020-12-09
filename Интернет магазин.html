@@ -44,29 +44,30 @@
 			<div class="popup-list" id="itemsList"></div>
 		
 		</div>
-<template id="jsPopup">
-	<input type="text" class="jsFirstName">
-</template>
-		
-		<div id="app"></div> 
-			<template id="counter">
-				
-				<div>
-				  <button type="button" class="jsDecrease">-</button>
-				  <input type="text" class="jsValue" value="0">
-				  <button type="button" class="jsIncrease">+</button>
-				</div>
-			  </template>
-			  <template id="row">
-				  <div class="row">
-					  <div class="jsPriceTotal text"></div>
-					  <div class="jsRowForm"></div>
-				  </div>
-			  </template>
+		<template id="jsPopup">Продукты в корзине
+			<div type="text" class="jsRowPopup"></div>
+			<button onclick="closePopup()"type="button" class="closePopup">X</button>
+		</template>
+		<div class="app"></div>
+		<template id="counterTemplate">
+			<div>
+				<button type="button" class="jsDecrease">-</button>
+				<input type="text" class="jsValue" value="0">
+				<button type="button" class="jsIncrease">+</button>
+			</div>
+		</template>
+		<template id="row">
+			<div class="row">
+				<div class="product">машинка</div>
+				<div class="price">500</div>
+				<div class="counter"></div>
+				<div class="close">x</div>
+			</div>
+		</template>
 			  <main>
 				<div id="wrapper"></div>
 			  </main> 
-<div id="jsNewPrice"></div>
+			  <button  onclick="openPopup()">Купить</button>
 			 
 		
 	</header>
