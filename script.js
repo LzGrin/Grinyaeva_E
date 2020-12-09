@@ -5,6 +5,7 @@ let counter;
 let basketElement = document.getElementById('basket-counter');
 let items = new Map();
 
+
 class Counter {
 
   set value(val) {
@@ -26,6 +27,7 @@ class Counter {
     this.valueInput.onblur = event => this.value = event.target.value;
     this.increaseButton.onclick = () => this.increase();
     this.decreaseButton.onclick = () => this.decrease();
+  
 
     wrapper.appendChild(content);
   }
@@ -48,7 +50,7 @@ counter.increase();*/
 
 class Row {
 
-  constructor(row) {
+  constructor(row, product) {
     const template = document.getElementById('row');
     const content = document.importNode(template.content, true);
     this.price = content.querySelector(".price");
@@ -56,9 +58,23 @@ class Row {
     const counter = content.querySelector(".counter");
     this.newCounter = new Counter(counter);
 
+    // const counterNew = new Counter(counter);
+    // counterNew.jsValue = 1;
+
+    const name = content.querySelector(".product");
+    name.innerText = product.title;
+
+    const price = content.querySelector(".price");
+    price.innerText = product.price;
+
+    this.newCounter.value = product.count;
+   
+
+
     row.appendChild(content);
   }
 }
+
 
 
 class Popup {
@@ -68,25 +84,28 @@ class Popup {
     const content = document.importNode(newPopupRow.content, true);
 
     const newRow = content.querySelector(".popup-list");
-    this.newRowPopup = new Row(newRow);
+    // this.newRowPopup = new Row(newRow);
 
     popup.appendChild(content);
 
+    items.forEach((product) => {
+      let newRowPopup = new Row(newRow, product);
+    });
   }
   close() {
     closePopup();
   }
 }
 
-function openPopup()  {
+function openPopup() {
 
   newPopup = new Popup(wrapperElement);
 
 }
 
 function closePopup() {
-newPopup = null;
-wrapperElement.innerHTML = "";
+  newPopup = null;
+  wrapperElement.innerHTML = "";
 }
 
 let changeCart = (title, price, articul) => {
@@ -101,4 +120,5 @@ let changeCart = (title, price, articul) => {
 
 }
 
- changeCart(title, price, articul);
+//  changeCart(title, price, articul);
+
