@@ -1,6 +1,9 @@
 const wrapperElement = document.getElementById("wrapper");
 let newPopup;
 const appNode = document.querySelector('.app');
+let counter;
+let basketElement = document.getElementById('basket-counter');
+let items = new Map();
 
 class Counter {
 
@@ -36,7 +39,6 @@ class Counter {
   }
 
 }
-
 
 /*new Counter(appNode);
  
@@ -100,3 +102,5 @@ let changeCart = (title, price, articul) => {
 }
 
 changeCart(title, price, articul);
+
+
