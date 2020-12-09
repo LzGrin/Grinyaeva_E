@@ -95,7 +95,7 @@ padding: 0 40px;
 	left: 50%;
 	width: 400px;
 	height: 600px;
-	visibility: hidden;
+	
 	border: 1px solid;
 	background: #fff;
 	display: flex;
@@ -153,7 +153,9 @@ padding: 0 40px;
 	height: 20px;
 	
 }
-
+.delete {
+	
+}
 .jsDecrease {
 	display: flex;
 	width: 20px;
