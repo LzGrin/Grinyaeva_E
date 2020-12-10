@@ -4,6 +4,7 @@ const appNode = document.querySelector('.app');
 let counter;
 let basketElement = document.getElementById('basket-counter');
 let items = new Map();
+const textCounter = document.getElementById("newCounter");
 
 
 class Counter {
@@ -27,7 +28,11 @@ class Counter {
     this.valueInput.onblur = event => this.value = event.target.value;
     this.increaseButton.onclick = () => this.increase();
     this.decreaseButton.onclick = () => this.decrease();
-  
+
+    this.newCounter = content.getElementById("newCounter");
+    this.newCounter.onblur = (event) => {
+      this.onCountChange(event.target.value);
+    };
 
     wrapper.appendChild(content);
   }
@@ -58,9 +63,6 @@ class Row {
     const counter = content.querySelector(".counter");
     this.newCounter = new Counter(counter);
 
-    // const counterNew = new Counter(counter);
-    // counterNew.jsValue = 1;
-
     const name = content.querySelector(".product");
     name.innerText = product.title;
 
@@ -68,13 +70,17 @@ class Row {
     price.innerText = product.price;
 
     this.newCounter.value = product.count;
-   
 
-
+    this.newCounterText = content.querySelector(".product");
+    const counterWrapper = content.querySelector(".counter");
+    this.counter = new Counter(counterWrapper);
+    this.counter.onCountChange = (count) => {
+      this.newCounterText.innerText = count;
+      this.onRowChange(count);
+    };
     row.appendChild(content);
   }
 }
-
 
 
 class Popup {
@@ -119,6 +125,4 @@ let changeCart = (title, price, articul) => {
   }
 
 }
-
-//  changeCart(title, price, articul);
 
