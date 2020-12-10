@@ -25,31 +25,33 @@ class Counter {
     this.decreaseButton = content.querySelector('.jsDecrease');
     this.increaseButton = content.querySelector('.jsIncrease');
 
-    this.valueInput.onblur = event => this.value = event.target.value;
+    this.valueInput.onblur = (event) => {
+      this.onCountChange(event.target.value);
+      this.value = event.target.value;
+    };
     this.increaseButton.onclick = () => this.increase();
     this.decreaseButton.onclick = () => this.decrease();
 
-    this.newCounter = content.getElementById("newCounter");
-    this.newCounter.onblur = (event) => {
-      this.onCountChange(event.target.value);
-    };
+
 
     wrapper.appendChild(content);
   }
 
   increase() {
     this.value++;
+    this.onCountChange(value);
   }
 
   decrease() {
     this.value--;
+    this.onCountChange(value);
   }
 
 }
 
-/*new Counter(appNode);
- 
-const counter = new Counter(appNode);
+// new Counter(appNode);
+
+/*const counter = new Counter(appNode);
 counter.value = 25;
 counter.increase();*/
 
@@ -61,7 +63,7 @@ class Row {
     this.price = content.querySelector(".price");
 
     const counter = content.querySelector(".counter");
-    this.newCounter = new Counter(counter);
+    // this.newCounter = new Counter(counter);
 
     const name = content.querySelector(".product");
     name.innerText = product.title;
@@ -125,4 +127,3 @@ let changeCart = (title, price, articul) => {
   }
 
 }
-
