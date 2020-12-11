@@ -70,14 +70,11 @@ class Row {
 
     const price = content.querySelector(".price");
     price.innerText = product.price;
-
-    
-
-    this.newCounterText = content.querySelector(".product");
-    const counterWrapper = content.querySelector(".counter");
-    this.counter = new Counter(counterWrapper);
-    this.counter.onCountChange = (count) => {
-      this.newCounterText.innerText = count;
+ 
+    const priceWrapper = content.querySelector(".price");
+    this.price = new Counter(priceWrapper);
+    this.price.onCountChange = (price) => {
+      this.newRowPrice = price;
       this.onRowChange(product);
     };
     row.appendChild(content);
@@ -99,7 +96,7 @@ class Popup {
     items.forEach((product) => {
       this.newRowPopup = new Row(newRow, product);
       this.newRowPopup.onRowChange = (items) => {
-        this.newRowText.innerText = items;
+        this.newRowText = items;
       }
     });
 
