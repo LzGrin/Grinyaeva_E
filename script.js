@@ -39,12 +39,12 @@ class Counter {
 
   increase() {
     this.value++;
-    this.onCountChange(value);
+    this.onCountChange(this.value);
   }
 
   decrease() {
     this.value--;
-    this.onCountChange(value);
+    this.onCountChange(this.value);
   }
 
 }
@@ -62,7 +62,7 @@ class Row {
     const content = document.importNode(template.content, true);
     this.price = content.querySelector(".price");
 
-    const counter = content.querySelector(".counter");
+    // const counter = content.querySelector(".counter");
     // this.newCounter = new Counter(counter);
 
     const name = content.querySelector(".product");
@@ -71,14 +71,14 @@ class Row {
     const price = content.querySelector(".price");
     price.innerText = product.price;
 
-    this.newCounter.value = product.count;
+    
 
     this.newCounterText = content.querySelector(".product");
     const counterWrapper = content.querySelector(".counter");
     this.counter = new Counter(counterWrapper);
     this.counter.onCountChange = (count) => {
       this.newCounterText.innerText = count;
-      this.onRowChange(count);
+      this.onRowChange(product);
     };
     row.appendChild(content);
   }
@@ -97,8 +97,14 @@ class Popup {
     popup.appendChild(content);
 
     items.forEach((product) => {
-      let newRowPopup = new Row(newRow, product);
+      this.newRowPopup = new Row(newRow, product);
+      this.newRowPopup.onRowChange = (items) => {
+        this.newRowText.innerText = items;
+      }
     });
+
+  
+   
   }
   close() {
     closePopup();
