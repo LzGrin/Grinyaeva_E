@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang='ru'>
 
+
 <head>
 	<title> WAHL MOSER </title>
 	<meta http-equiv='Content-type' content='text/html;charset=UTF-8' />
@@ -14,24 +15,23 @@
 		<div class="logo">
 			<img src="images/лого.png" alt="Картинка">
 		</div>
-
+		
 		<div class="search">
 			<input type="search" name="q" placeholder="Поиск по каталогу"> <input id="search" type="submit"
 				value="Найти">
 		</div>
-
-
+		
+		
 		<div id="basket" class="basket" onclick="openPopup()">
 			<img class="basket-image" src="images/корзина.jpg" alt="Картинка">
 			<span id="basket-counter" class="basket-counter">0</span>
 		</div>
-
-
+				
 		<div class="profile">
 			<img class="profileImg" src="images/профиль.jpg">
 			<span class="profile-name">Lizaveta G.</span>
 		</div>
-
+		
 		<template id="popup">
 			<div class="popup">
 				<span class="product-in-basket">In your cart:<img class="close" id="close" onclick="closePopup()"
@@ -44,10 +44,6 @@
 				<div class="popup-list" id="itemsList"></div>
 			</div>
 		</template>
-		<!-- <template id="jsPopup">Продукты в корзине
-			<div type="text" class="jsRowPopup"></div>
-			<button onclick="closePopup()"type="button" class="closePopup">X</button>
-		</template> -->
 		<div class="app"></div>
 		<template id="counterTemplate">
 			<div>
@@ -58,24 +54,20 @@
 		</template>
 		<template id="row">
 			<div class="row">
-				<div class="product"></div>
+				<div class="name"></div>
 				<div class="price"></div>
 				<div class="counter"></div>
-				<div class="delete" src="images/крестикпопап.png"></div>
+				<div class="delete" src="images/крестикпопап.png">Delete</div>
 			</div>
 		</template>
 		<main>
 			<div id="wrapper"></div>
-			
 		</main>
-		<!-- <button  onclick="openPopup()">Купить</button> -->
-
-
 	</header>
-
+	
 	<div class="header-mobile">
 		<div class="menu-mobile">
-
+			
 			<div class="menu-mobile_icon">
 				<div class="menu-box">
 					<div class="dropdown menu-item">
@@ -98,17 +90,16 @@
 					<div class="menu-box__contact menu-item">Контакты</div>
 				</div>
 			</div>
-
+			
 		</div>
 		<div class="mobile-search">
 			<input type="search" name="q" placeholder="Поиск по каталогу"> <input id="search" type="submit"
 				value="Найти">
 		</div>
 	</div>
-
-
+	
 	<nav class="menu">
-
+		
 		<div class="dropdown menu-item">
 			<a href="#" class="knopka menu-item">Каталог
 				<div class="dropdown-content">
@@ -129,19 +120,19 @@
 		<div class="pay menu-item">Доставка и оплата</div>
 		<div class="contact menu-item">Контакты</div>
 	</nav>
-
+	
 	<div class="banner-container">
 		<div class="arrow arrow-left">
 			< </div>
 				<div class="banner"></div>
 				<div class="arrow arrow-right"> ></div>
 		</div>
-
-
+		
+		
 		<h2 class="recomendation"> РЕКОМЕНДУЕМ </h2>
-
+		
 		<div class="box" id="box">
-
+			
 			<div class='products'>
 				<div class="product">
 					<div class="product-link image-container is-square">
@@ -159,7 +150,7 @@
 						onclick="changeCart('Профессиональная машинка с аккумуляторным питанием MOSER GENIO PRO FADING EDITION', 14200,  '1874-0053')">
 						В корзину</button>
 				</div>
-
+				
 				<div class="product">
 					<div class="product-link image-container is-square">
 						<img src="images/триммер2.jpg" width="250px" height="250px">
@@ -175,7 +166,7 @@
 						onclick="changeCart('Профессиональная машинка с комбинрованным питанием MOSER', 14900, '1888-0050')">В
 						корзину</button>
 				</div>
-
+				
 				<div class="product">
 					<div class="product-link image-container is-square">
 						<img src="images/триммер3.jpg" width="250px" height="250px">
@@ -192,7 +183,7 @@
 						onclick="changeCart('Машинка с комбинрованным питанием MOSER CHROM2STYLE', 14800, '1877-0050 / 1877-0051' )">В
 						корзину</button>
 				</div>
-
+				
 				<div class="product">
 					<div class="product-link image-container is-square">
 						<img src="images/машинка4.jpg" width="250px" height="250px">
@@ -207,7 +198,7 @@
 					</div>
 					<button onclick="changeCart('Триммер Wahl Detailer X-Tra Wide 5 Star', 9100, 4)">В корзину</button>
 				</div>
-
+				
 				<div class="product">
 					<div class="product-link image-container is-square">
 						<img src="images/триммер5.jpg" width="250px" height="250px">
@@ -224,7 +215,7 @@
 						onclick="changeCart('Профессиональная машинка WAHL MAGIC CLIP CORDLESS METAL EDITION СЕРЕБРИСТЫЙ', 14000, '8509-016' )">В
 						корзину</button>
 				</div>
-
+				
 				<div class="product">
 					<div class="product-link image-container is-square">
 						<img src="images/машинка6.jpg" width="250px" height="250px">
@@ -237,7 +228,7 @@
 					<div class="title in-card">Машинка для стрижки Wahl Super Taper</div>
 					<button onclick="changeCart('Машинка для стрижки Wahl Super Taper', 7100, 6)">В корзину</button>
 				</div>
-
+				
 				<div class="product">
 					<div class="product-link image-container is-square">
 						<img src="images/комбомашинки7.png" width="250px" height="250px">
@@ -250,7 +241,7 @@
 					<div class="title in-card">Машинка+Триммер Wahl Barber Combo</div>
 					<button onclick="changeCart('Машинка+Триммер Wahl Barber Combo', 21800, 7)">В корзину</button>
 				</div>
-
+				
 				<div class="product">
 					<div class="product-link image-container is-square">
 						<img src="images/шейвербольшой.jpeg" width="250px" height="250px">
@@ -263,7 +254,7 @@
 					<div class="title in-card">Бритва WAHL Finale </div>
 					<button onclick="changeCart('Бритва WAHL Finale', 11500, 8)">В корзину</button>
 				</div>
-
+				
 				<div class="product">
 					<div class="product-link image-container is-square">
 						<img src="images/шейвермини.jpg" width="250px" height="250px">
@@ -277,13 +268,11 @@
 					<button onclick="changeCart('Бритва WAHL Mobile Shaver', 1750, 9)">В корзину</button>
 				</div>
 			</div>
-
-
+			
 			<footer></footer>
 			<div class="loader" id="loader">
 				<div class="loader_inner"> </div>
 			</div>
 			<script type="text/javascript" src="script.js"></script>
 </body>
-
 </html>
